@@ -28,8 +28,6 @@ export default class Document extends PureComponent {
   }
 
   updateMarkdown = ({ target }) => {
-    console.log('THIS IS THE STATE', this.state);
-    console.log('HELLO', updateMarkdown(target.value));
     store.dispatch(updateMarkdown(target.value));
   };
 
