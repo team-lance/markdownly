@@ -1,6 +1,6 @@
 import { getMarkdown } from './markdownSelectors';
 
-describe('selector tests', () => {
+describe('markdown selectors tests', () => {
   it('test the get single markdown selector', () => {
     const state = {
       markdown: 'some string'

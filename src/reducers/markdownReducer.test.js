@@ -1,6 +1,6 @@
 import reducer from './markdownReducer';
 
-describe('markdown reducer tests', () => {
+describe('markdown reducers tests', () => {
 
   it('handles an update markdown action', () => {
     const state = {
