@@ -1,12 +1,10 @@
 import reducer from './markdownReducer';
 
 describe('markdown reducers tests', () => {
-
+  
   it('handles an update markdown action', () => {
     const state = {
-      markdown: {
-        text: ''
-      }
+      markdown: ''
     };
     const updatedState = reducer(state, {
       type: 'UPDATE_MARKDOWN',
