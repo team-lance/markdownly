@@ -1,3 +1,3 @@
-export const getMarkdown = (state) =>  {
-  return state.markdown;
+export const getMarkdown = state =>  {
+  return state.markdownReducer.markdown;
 };
