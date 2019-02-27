@@ -1,7 +1,7 @@
 import { updateMarkdown, UPDATE_MARKDOWN } from './markdownActions';
 
 
-describe('Update markdown action', () => {
+describe('test markdown actions', () => {
   it('updates a markdown file', () => {
     const action  = updateMarkdown('something');
 

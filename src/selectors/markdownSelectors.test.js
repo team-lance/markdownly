@@ -2,12 +2,10 @@ import { getMarkdown } from './markdownSelectors';
 
 describe('selector tests', () => {
   it('test the get single markdown selector', () => {
-
     const state = {
       markdown: 'some string'
     };
     const markdown = getMarkdown(state);
-
     expect(markdown).toEqual('some string');
   });
 
