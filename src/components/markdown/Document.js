@@ -2,15 +2,41 @@ import React, { PureComponent } from 'react';
 import Preview from './Preview';
 import Editor from './Editor';
 import styles from './Document.css';
+import store from '../../store';
+import { updateMarkdown } from '../../actions/markdownActions';
+import { getMarkdown } from '../../selectors/markdownSelectors';
 
 export default class Document extends PureComponent {
   state = {
-    markdown: '# Hi there'
+    markdown: '',
+    unsubscribe: null
   };
 
-  updateMarkdown = ({ target }) => {
-    this.setState({ markdown: target.value });
+  updateState = () => {
+    const currentReduxState = store.getState();
+    const markdown = getMarkdown(currentReduxState);
+    this.setState({ markdown });
   };
+  
+
+  componentDidMount() {
+    this.updateState();
+    const unsubscribe = store.subscribe(() => {
+      this.updateState();
+    });
+    this.setState({ unsubscribe });
+  }
+
+  updateMarkdown = ({ target }) => {
+    console.log('THIS IS THE STATE', this.state);
+    console.log('HELLO', updateMarkdown(target.value));
+    store.dispatch(updateMarkdown(target.value));
+  };
+
+  componentWillUnmount() {
+    this.state.unsubscribe();
+  }
+
 
   render() {
     const { markdown } = this.state;
