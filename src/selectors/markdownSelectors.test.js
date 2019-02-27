@@ -1,7 +1,7 @@
 import { getMarkdown } from './markdownSelectors';
 
 describe('markdown selectors tests', () => {
-  it('test the get single markdown selector', () => {
+  it('gets markdown text from state', () => {
     const state = {
       markdown: 'some string'
     };
@@ -9,7 +9,7 @@ describe('markdown selectors tests', () => {
     expect(markdown).toEqual('some string');
   });
 
-  it('it will return an empty state if state is empty', () => {
+  it('gets empty markdown text', () => {
     const state = {
       markdown: ''
     };
