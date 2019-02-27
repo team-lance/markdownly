@@ -6,13 +6,12 @@ const initialState = {
 
 
 export default function reducer(state = initialState, action) {
-  // switch(action.type) {
-  //   case UPDATE_MARKDOWN:
-  //     return {
-  //       markdown: state.markdown,
-  //       payload: action.payload
-  //     };
-  //   default: 
+  switch(action.type) {
+    case UPDATE_MARKDOWN:
+      return {
+        markdown: action.payload
+      };
+    default: 
       return state;
-  // }
+  }
 }
