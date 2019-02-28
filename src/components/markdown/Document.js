@@ -5,6 +5,7 @@ import styles from './Document.css';
 import store from '../../store';
 import { updateMarkdown } from '../../actions/markdownActions';
 import { getMarkdown } from '../../selectors/markdownSelectors';
+import SaveAsForm from '../../containers/SaveAsForm';
 
 export default class Document extends PureComponent {
   state = {
@@ -41,6 +42,7 @@ export default class Document extends PureComponent {
     return (
       <>
         <div className={styles.Document}>
+          <SaveAsForm markdown={markdown}/>
           <Editor markdown={markdown} updateMarkdown={this.updateMarkdown} />
           <Preview markdown={markdown} />
         </div>
