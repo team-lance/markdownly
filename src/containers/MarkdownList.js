@@ -27,7 +27,6 @@ export default class MarkdownList extends PureComponent {
         <MarkdownTitles
           titles={markdownTitles}
         />
-
       );
     }
 }
