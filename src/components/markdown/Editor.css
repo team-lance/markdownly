@@ -13,3 +13,7 @@
   letter-spacing: 0.3px;
 	word-spacing: 1px;
 }
+
+.Editor:focus {
+  outline-width: 0;
+}
