@@ -1,18 +1,18 @@
 import React, { PureComponent } from 'react';
-import { getTitles } from '../selectors/getTitlesSelector';
-import { SavedMarkdownList } from '../components/SavedMarkdownList';
+import { getTitles } from '../selectors/markdownListSelectors';
+import { MarkdownTitles } from '../components/SavedMarkdownList';
 import store from '../store';
 
 export default class MarkdownList extends PureComponent {
     state = {
-      markdownList: []
+      markdownTitles: []
     };
 
     componentDidMount() {
       this.unsubscribe = store.subscribe(() => {
         const state = store.getState();
-        const markdownList = getTitles(state);
-        this.setState({ markdownList });
+        const markdownTitles = getTitles(state);
+        this.setState({ markdownTitles });
       });
     }
     componentWillUnmount() {
@@ -22,10 +22,10 @@ export default class MarkdownList extends PureComponent {
     }
 
     render() {
-      const { markdownList } = this.state;
+      const { markdownTitles } = this.state;
       return (
-        <SavedMarkdownList
-          titles={markdownList}
+        <MarkdownTitles
+          titles={markdownTitles}
         />
 
       );
