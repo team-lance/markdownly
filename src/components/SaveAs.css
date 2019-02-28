@@ -1,0 +1,27 @@
+form {
+  padding-left: 1.875em;
+  padding-right: 1.875em;
+  background-color: lightgray;
+  padding-top: 1.875em;
+}
+
+input {
+  padding: 0.313em; 
+  border: 2px solid #808080; 
+  border-radius: 5px;
+  margin-left: 0.625em;
+}
+
+button {
+  padding: 0.313em 0.938em; 
+  border: 2px solid #808080;
+  margin-left: 0.625em;
+  cursor:pointer;
+  border-radius: 5px;
+}
+
+span {
+  margin-right: 0.625em;
+  font-family: 'Open Sans', sans-serif;
+  color: #555;
+}
