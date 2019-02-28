@@ -11,7 +11,10 @@ module.exports = {
     port: 7890
   },
   plugins: [
-    new HtmlPlugin({ template: './src/index.html', favicon: './src/assets/favicon.ico' }),
+    new HtmlPlugin({
+      template: './src/index.html',
+      favicon: './src/assets/favicon.ico'
+    }),
     new CleanPlugin('./dist')
   ],
   module: {
@@ -25,10 +28,6 @@ module.exports = {
             cacheDirectory: true
           }
         }
-      },
-      {
-        test: /\.jpe?g$|\.ico$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$|\.wav$|\.mp3$/,
-        loader: 'file-loader'
       },
       {
         test: /\.css$/,
