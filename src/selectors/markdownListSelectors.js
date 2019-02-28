@@ -7,5 +7,3 @@ export const getTitles = state => {
     return markdown.title; 
   });
 };
-
-

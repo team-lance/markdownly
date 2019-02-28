@@ -3,7 +3,7 @@
 
 .Editor {
   padding: 1em;
-  width: 50vw;
+  width: 35vw;
   height: 100vh;
   font-family: 'Roboto Mono', monospace;
   font-size: 1.5em;
@@ -12,4 +12,8 @@
   color: #F8F8F2;
   letter-spacing: 0.3px;
 	word-spacing: 1px;
+}
+
+.Editor:focus {
+  outline-width: 0;
 }
