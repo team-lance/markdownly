@@ -1,4 +1,4 @@
-import { CREATE_MARKDOWN } from '../actions/markdownActions';
+import { CREATE_MARKDOWN } from '../actions/markdownListActions';
 
 const initialState = {
   markdownList: []
