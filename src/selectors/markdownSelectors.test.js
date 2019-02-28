@@ -3,7 +3,9 @@ import { getMarkdown } from './markdownSelectors';
 describe('markdown selectors tests', () => {
   it('gets markdown text from state', () => {
     const state = {
-      markdown: 'some string'
+      markdownReducer: {
+        markdown: 'some string'
+      }
     };
     const markdown = getMarkdown(state);
     expect(markdown).toEqual('some string');
@@ -11,7 +13,9 @@ describe('markdown selectors tests', () => {
 
   it('gets empty markdown text', () => {
     const state = {
-      markdown: ''
+      markdownReducer: {
+        markdown: ''
+      }
     };
     const markdown = getMarkdown(state);
     expect(markdown).toEqual('');
