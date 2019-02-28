@@ -1,6 +1,7 @@
 const HtmlPlugin = require('html-webpack-plugin');
 const CleanPlugin = require('clean-webpack-plugin');
 
+// eslint-disable-next-line
 module.exports = {
   entry: ['@babel/polyfill', './src/index.js'],
   output: {
@@ -10,7 +11,7 @@ module.exports = {
     port: 7890
   },
   plugins: [
-    new HtmlPlugin({ template: './src/index.html' }),
+    new HtmlPlugin({ template: './src/index.html', favicon: './src/assets/favicon.ico' }),
     new CleanPlugin('./dist')
   ],
   module: {
@@ -24,6 +25,10 @@ module.exports = {
             cacheDirectory: true
           }
         }
+      },
+      {
+        test: /\.jpe?g$|\.ico$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$|\.wav$|\.mp3$/,
+        loader: 'file-loader'
       },
       {
         test: /\.css$/,
