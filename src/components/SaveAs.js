@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './SaveAs.css';
 
 export default function SaveAs({ title, onSave, handleChange }) {
   return (
     <form onSubmit={onSave}>
       <label>
-        Save As:
+        <span>Save As:</span>
         <input type='text' name='title' value={title} onChange={handleChange}/>
       </label>
       <button>Button</button>
