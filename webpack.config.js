@@ -10,6 +10,10 @@ module.exports = {
   devServer: {
     port: 7890
   },
+  performance: {
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000
+  },
   plugins: [
     new HtmlPlugin({
       template: './src/index.html',
