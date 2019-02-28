@@ -1,7 +1,7 @@
 import { createMarkdown, CREATE_MARKDOWN } from './markdownListActions';
 
 describe('markdown list action tests', () => {
-  it('creates an action that updates the markdown list', () => {
+  it('appends markdown to a list', () => {
     const action = createMarkdown({
       markdown: '## Description\n\n### More text'
     });

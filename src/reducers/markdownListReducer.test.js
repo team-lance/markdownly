@@ -1,7 +1,7 @@
 import reducer from './markdownListReducer';
 
 describe('markdown list reducers tests', () => {
-  it('handles an add markdown to markdown list action', () => {
+  it('handles adding markdown to the markdown list', () => {
     const state = {
       markdownList: []
     };
