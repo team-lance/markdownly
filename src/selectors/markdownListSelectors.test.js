@@ -26,7 +26,7 @@ describe('markdown list selectors tests', () => {
     };
 
     const markdownTitles = getTitles(state);
-
+    
     expect(markdownTitles).toEqual(['title', 'title2']);
   });
 });
