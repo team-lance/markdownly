@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Preview matches a snapshot 1`] = `
+<div
+  className="markdown-body preview"
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "<h2 id=\\"some-markdown-text\\">Some markdown text</h2>
+<h3 id=\\"some-description-text\\">Some description text</h3>
+",
+    }
+  }
+/>
+`;
