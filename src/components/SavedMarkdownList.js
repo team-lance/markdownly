@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export function MarkdownTitles({ titles, deleteMarkdown }) {
-
   const listOfTitles = titles.map((title, i)  => {
     return <li key={i}>
       {title.title}
