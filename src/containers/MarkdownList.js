@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { getMarkdownList } from '../selectors/markdownListSelectors';
-import { MarkdownTitles } from '../components/SavedMarkdownList';
+import SavedMarkdownList from '../components/SavedMarkdownList';
 import store from '../store';
 import { deleteMarkdown } from '../actions/markdownListActions';
 
@@ -23,13 +23,12 @@ export default class MarkdownList extends PureComponent {
     }
     delete = (id) => {
       store.dispatch(deleteMarkdown(id));
-      console.log('DELETED');
-    }
+    };
 
     render() {
       const { markdownTitles } = this.state;
       return (
-        <MarkdownTitles
+        <SavedMarkdownList
           deleteMarkdown={this.delete}
           titles={markdownTitles}
         />

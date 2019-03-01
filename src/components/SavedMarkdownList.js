@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './SavedMarkdownList.css';
 
-export function MarkdownTitles({ titles, deleteMarkdown }) {
+function SavedMarkdownList({ titles, deleteMarkdown }) {
   const listOfTitles = titles.map((title, i)  => {
     return <li key={i}>
       {title.title}
@@ -17,7 +17,9 @@ export function MarkdownTitles({ titles, deleteMarkdown }) {
   );
 }
 
-MarkdownTitles.propTypes = {
+SavedMarkdownList.propTypes = {
   titles: PropTypes.array.isRequired,
   deleteMarkdown: PropTypes.func.isRequired
 };
+
+export default SavedMarkdownList;

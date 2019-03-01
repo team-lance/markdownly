@@ -7,7 +7,3 @@ export const getTitles = state => {
     return markdown.title; 
   });
 };
-
-// export const getMarkdownByTitle = state => {
-
-// }

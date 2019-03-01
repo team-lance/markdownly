@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SavedMarkdownList matches a snapshot 1`] = `
+<ul
+  className="list"
+>
+  <li
+    key="0"
+  >
+    <button
+      onClick={[Function]}
+    >
+      DELETE
+    </button>
+  </li>
+  <li
+    key="1"
+  >
+    <button
+      onClick={[Function]}
+    >
+      DELETE
+    </button>
+  </li>
+</ul>
+`;
