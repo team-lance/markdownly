@@ -9,7 +9,7 @@ export default function SaveAs({ title, onSave, handleChange }) {
         <span>Save As:</span>
         <input type='text' name='title' value={title} onChange={handleChange}/>
       </label>
-      <button>Button</button>
+      <button>Save</button>
     </form>
   );
 }

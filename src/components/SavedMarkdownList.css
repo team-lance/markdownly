@@ -1,0 +1,20 @@
+.list {
+  position: absolute;
+  top: 18em;
+  list-style: none;
+  font-family: 'Roboto Mono', monospace;
+  color: #808080;
+}
+
+li {
+  margin: 1em;
+  font-size: 1.2em;
+  text-transform: uppercase;
+}
+
+li:hover {
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: underline;
+}
