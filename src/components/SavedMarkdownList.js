@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-
 export function MarkdownTitles({ titles, deleteMarkdown }) {
 
   const listOfTitles = titles.map((title, i)  => {
