@@ -4,8 +4,9 @@ import SavedMarkdownList from './SavedMarkdownList';
 
 describe('SavedMarkdownList', () => {
   it('matches a snapshot', () => {
+    const strings = ['title1', 'title2'];
     const wrapper = shallow(
-      <SavedMarkdownList titles={['title1', 'title2']}/>
+      <SavedMarkdownList titles={strings}/>
     );
     expect(wrapper).toMatchSnapshot();
   });
