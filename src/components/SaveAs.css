@@ -2,6 +2,7 @@ form {
   padding-left: 1.875em;
   padding-right: 1.875em;
   background-color: lightgray;
+  font-family: 'Roboto Mono', monospace;
   padding-top: 1.875em;
 }
 
@@ -22,6 +23,5 @@ button {
 
 span {
   margin-right: 0.625em;
-  font-family: Arial, Helvetica, sans-serif;
   color: #555;
 }
