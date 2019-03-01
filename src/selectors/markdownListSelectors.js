@@ -4,6 +4,10 @@ export const getMarkdownList = state => {
 
 export const getTitles = state => {
   return state.markdownListReducer.markdownList.map(markdown => {
-    return markdown.title; 
+    return markdown; 
   });
 };
+
+// export const getMarkdownByTitle = state => {
+
+// }

@@ -3,11 +3,13 @@ import SaveAs from '../components/SaveAs';
 import store from '../store';
 import { createMarkdown } from '../actions/markdownListActions';
 import { getMarkdown } from '../selectors/markdownSelectors';
+import shortId from 'shortid';
 
 export default class SaveAsForm extends PureComponent {
   state = {
     markdownList: [],
-    title: ''
+    title: '',
+    id: ''
   };
 
   componentDidMount() {
@@ -30,8 +32,11 @@ export default class SaveAsForm extends PureComponent {
 
   onSave = event => {
     event.preventDefault();
-    const { title, markdown } = this.state;
-    store.dispatch(createMarkdown({ title, markdown }));
+    const someId = shortId.generate();
+    const { title, markdown, id } = this.state;
+    this.setState({ id: someId });
+    store.dispatch(createMarkdown({ title, markdown, id }));
+    
   };
 
   render() {
