@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { getTitles } from '../selectors/markdownListSelectors';
+import { getMarkdownList } from '../selectors/markdownListSelectors';
 import { MarkdownTitles } from '../components/SavedMarkdownList';
 import store from '../store';
 import { deleteMarkdown } from '../actions/markdownListActions';
@@ -12,7 +12,7 @@ export default class MarkdownList extends PureComponent {
     componentDidMount() {
       this.unsubscribe = store.subscribe(() => {
         const state = store.getState();
-        const markdownTitles = getTitles(state);
+        const markdownTitles = getMarkdownList(state);
         this.setState({ markdownTitles });
       });
     }
