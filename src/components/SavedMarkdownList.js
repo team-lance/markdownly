@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './SavedMarkdownList.css';
 
 export function MarkdownTitles({ titles, deleteMarkdown }) {
   const listOfTitles = titles.map((title, i)  => {
@@ -10,7 +11,7 @@ export function MarkdownTitles({ titles, deleteMarkdown }) {
   });
 
   return (
-    <ul>
+    <ul className={styles.list}>
       {listOfTitles}
     </ul>
   );
